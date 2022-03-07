@@ -17,10 +17,24 @@ namespace Samolocik.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        [HttpPost]
+        public ActionResult SubmitAction(IFormCollection collection)
         {
-            return View();
+            //Pobieranie danych z formularza
+            string login = collection["login"];
+            string pass = collection["pass"];
+
+            //Sprawdzanie poprawności danych logowania i przydzielania roli użytkownikowi
+            //Jeśli login zaczyna się od 'admin' i hasło to 'admin' zaloguje jako administrator
+            bool admin= login.StartsWith("admin") && pass.Equals("admin");
+            //Jeśli nie admin i hasło to 'haslo' zaloguje jako pracownik
+            bool employee = !admin && pass.Equals("haslo");
+            //Jeśli nic z powyższych to zostanie na stronie
+
+            //Przekierowywanie w zależności od roli użytkownika
+            if (admin) return RedirectToAction("Index", "AdminPanel");
+            else if (employee) return RedirectToAction("Index", "EmployeePanel");
+            else return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

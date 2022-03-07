@@ -22,7 +22,14 @@ form{
     flex-direction:column;
     align-items:center;
 }
+input{
+    min-width:200px;
+    max-width:400px;
+}
 .logo{
     width:200px;
 
+}
+.small-logo {
+    width: 40px;
 }
