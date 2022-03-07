@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Authors>Paweł Brandt,Piotr Będkowski,Kuba Swisłocki,Gracjan Zarzycki,Rafał Wołyniec</Authors>
+    <Company>Connect5</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\samolocik.png" />
+  </ItemGroup>
+
+</Project>
