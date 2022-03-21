@@ -22,7 +22,7 @@ form{
     flex-direction:column;
     align-items:center;
 }
-input{
+input[type=text],input[type=password]{
     min-width:200px;
     max-width:400px;
 }
@@ -32,4 +32,8 @@ input{
 }
 .small-logo {
     width: 40px;
+}
+table{
+    text-align:center;
+    align-items:center;
 }

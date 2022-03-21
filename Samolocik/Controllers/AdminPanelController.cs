@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Samolocik.Models;
 
 namespace Samolocik.Controllers
 {
